@@ -192,7 +192,9 @@ router.put('/shoppingCarts/:id', function (req, res) {
 		{
 			customer: req.body.customer,
 			products: req.body.products,
-			status: req.body.status
+			status: req.body.status,
+			date: req.body.date,
+			total: req.body.total
 		}
 	);
 	req.db.collection('shoppingCarts').find({ _id: req.params.id }, function (e, doc) {
